@@ -19,7 +19,7 @@ public class TC01DieRandom {
        7 = 6/36 = 1/6
         */
         int slag1, slag2, sum, sumtest, to, tre, fire, fem, seks, syv, otte, ni, ti, elleve, tolv;
-        player.setScore(player.getScore() + sumOfDice.getSum());
+        Random test = new Random();
         slag1=0;
         slag2=0;
         sum=0;
@@ -36,49 +36,49 @@ public class TC01DieRandom {
         tolv=0;
         //For loopet regner forekomsten af alle tilfælde to til tolv sammen i en int (to - tolv) ved 1000 terningekast.
         for (int i=0; i<1000; i++ ) {
-            slag1 = test.RollDice;
-            slag2 = test.RollDice;
+            slag1 = test.nextInt((6-1)+1)+1;
+            slag2 = test.nextInt((6-1)+1)+1;
             sum = slag1 + slag2 + sum;
             sumtest = slag1 + slag2;
             System.out.println(slag1);
             System.out.println(slag2);
-                switch (sumtest) {
-                    case 2:
-                        to = to+1;
-                        break;
-                    case 3:
-                        tre = tre+1;
-                        break;
-                    case 4:
-                        fire = fire+1;
-                        break;
-                    case 5:
-                        fem = fem+1;
-                        break;
-                    case 6:
-                        seks = seks+1;
-                        break;
-                    case 7:
-                        syv = syv+1;
-                        break;
-                    case 8:
-                        otte = otte+1;
-                        break;
-                    case 9:
-                        ni = ni+1;
-                        break;
-                    case 10:
-                        ti = ti+1;
-                        break;
-                    case 11:
-                        elleve = elleve+1;
-                        break;
-                    case 12:
-                        tolv = tolv+1;
-                        break;
-                    default:
-                        throw new IllegalStateException("Unexpected value: " + sumtest);
-                }
+            switch (sumtest) {
+                case 2:
+                    to = to+1;
+                    break;
+                case 3:
+                    tre = tre+1;
+                    break;
+                case 4:
+                    fire = fire+1;
+                    break;
+                case 5:
+                    fem = fem+1;
+                    break;
+                case 6:
+                    seks = seks+1;
+                    break;
+                case 7:
+                    syv = syv+1;
+                    break;
+                case 8:
+                    otte = otte+1;
+                    break;
+                case 9:
+                    ni = ni+1;
+                    break;
+                case 10:
+                    ti = ti+1;
+                    break;
+                case 11:
+                    elleve = elleve+1;
+                    break;
+                case 12:
+                    tolv = tolv+1;
+                    break;
+                default:
+                    throw new IllegalStateException("Unexpected value: " + sumtest);
+            }
         }
         //Printer forekomsten af hvert tilfælde (to til tolv) - normalfordelingens sandsynlighed
         System.out.println("Tallet to " + (to));
