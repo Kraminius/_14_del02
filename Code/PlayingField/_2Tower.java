@@ -13,6 +13,10 @@ public class _2Tower extends Field {
 
         int fieldPoints = 250;
 
+
+
+
+
         return fieldPoints;
 
 
