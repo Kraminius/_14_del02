@@ -80,6 +80,8 @@ public class Text {
                         "n the rock, you struck gold and a lot of it! +650");
                 break;
             }
+            default:
+                throw new IllegalStateException("Unexpected value: " + fieldNumber);
         }
     }
     public void Danish() {
