@@ -1,3 +1,4 @@
+//The base-code is copied from earlier project made by same group. Modified slightly to work in this project.
 public class Players {
 
     private Player[] allPlayers; //Creates a Game.Player array to hold all the players.
