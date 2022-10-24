@@ -2,6 +2,7 @@ package Code.PlayingField;
 
 
 import Code.HandlePoints;
+import Code.Languages.Text;
 import Code.Player;
 
 public class _2Tower extends Field {
@@ -27,9 +28,10 @@ public class _2Tower extends Field {
     @Override
     public void message() {
 
-        String fieldsMessage = "You climb up the great tower and at the top is a nest with a golden egg in it!";
+        Text text = new Text();
 
-        System.out.println(fieldsMessage);
+        text.PickLanguage(2);
+
 
     }
 }
