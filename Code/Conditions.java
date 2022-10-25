@@ -7,16 +7,14 @@ public class Conditions {
     private boolean winTerm;
     private boolean extraTurn;
 
-    public void WonGame(Player player){
-
+    public boolean WonGame(Player player){
         if(player.getScore() >= pointsNeededToWin){
-
             winTerm = true;
 
         }else{
 
         }
-
+        return winTerm;
     }
 
     public boolean isWinTerm() {
