@@ -1,26 +1,50 @@
 package Code;
 
+import Code.PlayingField.Field;
+
 public class Game {
 
 
-    public Game(){
+    public Game(int numberOfPlayers){
 
-        RollDice rollDice = new RollDice();
-        rollDice.Roll();
+        Players players = new Players(numberOfPlayers);
+        CurrentPlayer currentPlayer = new CurrentPlayer();
 
-        SumOfDice sumOfDice = new SumOfDice();
-        sumOfDice.setSum(3);
+        do{
+            currentPlayer.checkCurrentPlayer(players);
 
 
-        Picker picker = new Picker();
-        picker.LandedField(sumOfDice);
-        System.out.println(picker.getTurnPoints());
+
+        }while(true);
 
 
 
     }
 
 
+
+    public void TurnProcess(Player player){
+
+
+        //Roll dice
+        RollDice rollDice = new RollDice();
+        rollDice.Roll();
+
+        //Calculates sum of roll
+        SumOfDice sumOfDice = new SumOfDice();
+        sumOfDice.calcSum(rollDice);
+
+        //Finds the field
+        Picker picker = new Picker();
+        picker.LandedField(sumOfDice);
+
+        //Calculates player total points
+        HandlePoints handlePoints = new HandlePoints();
+        handlePoints.GivePlayerPoints(player, picker.getTurnPoints());
+
+
+
+    }
 
 
 
