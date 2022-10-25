@@ -13,7 +13,7 @@ public class Display {
     }
 
     public void turnText(Player player, SumOfDice sumOfDice) {
-        System.out.println("Player: " + player.getNumber() + " rolled " + sumOfDice.getSum());
+        System.out.println("Player " + player.getNumber() + " rolled " + sumOfDice.getSum());
     }
     public void endTurnText(Player player) {
         System.out.println("Your score is now: " + player.getScore() +"!");
@@ -29,6 +29,11 @@ public class Display {
             System.out.println("--------------------------------------------------------------------------------");
             System.out.println();
 
+        }
+    }
+    public void WonGameText(Player player, Conditions conditions) {
+        if (conditions.WonGame(player)) {
+            System.out.println("Player " + player.getNumber() + " won the game! Congratulations!");
         }
     }
 }
