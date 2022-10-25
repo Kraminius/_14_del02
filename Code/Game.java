@@ -6,9 +6,10 @@ import java.util.Scanner;
 
 public class Game {
 
-
-    public Game(int numberOfPlayers){
-
+    public Game(){
+        StartGameText();
+        int numberOfPlayers;
+        numberOfPlayers = AmountOfPlayers();
         Players players = new Players(numberOfPlayers);
         CurrentPlayer currentPlayer = new CurrentPlayer();
         Conditions conditions = new Conditions();
@@ -18,7 +19,7 @@ public class Game {
             currentPlayer.checkCurrentPlayer(players);
             do{
 
-                StartPlayerTurn();
+                StartPlayerTurn(players.getAllPlayers()[currentPlayer.getCurrentPlayerNumber()-1]);
                 TurnProcess(players.getAllPlayers()[currentPlayer.getCurrentPlayerNumber()-1], conditions);
 
             }while(conditions.isExtraTurn());
@@ -31,8 +32,20 @@ public class Game {
 
     }
 
+    public void StartGameText(){
+        Display display = new Display();
+        display.startOfGameText();
+    }
+    public int AmountOfPlayers(){
+        int howManyPlayers;
+        Scanner scanner = new Scanner(System.in);
+        howManyPlayers = scanner.nextInt();
+        return howManyPlayers;
+    }
 
-    public void StartPlayerTurn(){
+    public void StartPlayerTurn(Player player){
+        Display display = new Display();
+        display.startText(player);
 
         //Player has to press something to start turn
         Scanner scanner = new Scanner(System.in);
@@ -55,7 +68,6 @@ public class Game {
         Picker picker = new Picker();
 
 
-
         picker.LandedField(sumOfDice);
 
 
@@ -70,7 +82,10 @@ public class Game {
         conditions.CheckExtraTurn(picker);
         conditions.WonGame(player);
 
-
+        Display display = new Display();
+        display.turnText(player, sumOfDice);
+        display.endTurnText(player);
+        display.extraTurnText(conditions);
 
 
     }
