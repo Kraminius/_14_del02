@@ -64,6 +64,9 @@ public class Game {
         SumOfDice sumOfDice = new SumOfDice();
         sumOfDice.calcSum(rollDice);
 
+        Display display = new Display();
+        display.turnText(player, sumOfDice);
+
         //Finds the field
         Picker picker = new Picker();
 
@@ -81,8 +84,7 @@ public class Game {
         conditions.CheckExtraTurn(picker);
         conditions.WonGame(player);
 
-        Display display = new Display();
-        display.turnText(player, sumOfDice);
+
         display.endTurnText(player);
         display.extraTurnText(conditions);
 
