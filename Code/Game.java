@@ -9,11 +9,12 @@ public class Game {
         rollDice.Roll();
 
         SumOfDice sumOfDice = new SumOfDice();
-        sumOfDice.setSum(2);
+        sumOfDice.setSum(3);
 
 
         Picker picker = new Picker();
         picker.LandedField(sumOfDice);
+        System.out.println(picker.getTurnPoints());
 
 
 
