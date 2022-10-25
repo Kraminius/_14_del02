@@ -2,6 +2,8 @@ package Code;
 
 import Code.PlayingField.Field;
 
+import java.util.Scanner;
+
 public class Game {
 
 
@@ -11,8 +13,10 @@ public class Game {
         CurrentPlayer currentPlayer = new CurrentPlayer();
 
         do{
-            currentPlayer.checkCurrentPlayer(players);
 
+            currentPlayer.checkCurrentPlayer(players);
+            StartPlayerTurn();
+            TurnProcess(players.getAllPlayers()[currentPlayer.getCurrentPlayerNumber()-1]);
 
 
         }while(true);
@@ -22,6 +26,12 @@ public class Game {
     }
 
 
+    public void StartPlayerTurn(){
+
+        Scanner scanner = new Scanner(System.in);
+        scanner.nextLine();
+
+    }
 
     public void TurnProcess(Player player){
 
@@ -41,6 +51,8 @@ public class Game {
         //Calculates player total points
         HandlePoints handlePoints = new HandlePoints();
         handlePoints.GivePlayerPoints(player, picker.getTurnPoints());
+
+        System.out.println(player.getNumber() + " " + player.getScore());
 
 
 
