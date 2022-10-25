@@ -13,7 +13,6 @@ public class Game {
         Players players = new Players(numberOfPlayers);
         CurrentPlayer currentPlayer = new CurrentPlayer();
         Conditions conditions = new Conditions();
-
         do{
 
             currentPlayer.checkCurrentPlayer(players);
@@ -27,9 +26,7 @@ public class Game {
 
 
         }while(!conditions.isWinTerm());
-
-
-
+        WonGame(players.getAllPlayers()[currentPlayer.getCurrentPlayerNumber()-1], conditions);
     }
 
     public void StartGameText(){
@@ -38,9 +35,17 @@ public class Game {
     }
     public int AmountOfPlayers(){
         int howManyPlayers;
-        Scanner scanner = new Scanner(System.in);
-        howManyPlayers = scanner.nextInt();
+        while (true){
+            try{
+                Scanner scanner = new Scanner(System.in);
+                howManyPlayers = scanner.nextInt();
+                break;
+            }catch (Exception e){
+                System.out.println("What you provided was not a number, please insert a number:");
+            }
+        }
         return howManyPlayers;
+
     }
 
     public void StartPlayerTurn(Player player){
@@ -74,7 +79,6 @@ public class Game {
         picker.LandedField(sumOfDice);
 
 
-
         //Calculates player total points
         HandlePoints handlePoints = new HandlePoints();
         handlePoints.GivePlayerPoints(player, picker.getTurnPoints());
@@ -90,7 +94,10 @@ public class Game {
 
 
     }
-
+    public void WonGame(Player player, Conditions conditions) {
+        Display display = new Display();
+        display.WonGameText(player, conditions);
+    }
 
 
 }
