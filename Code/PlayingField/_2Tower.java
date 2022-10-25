@@ -1,9 +1,8 @@
 package Code.PlayingField;
 
 
-import Code.HandlePoints;
+import Code.Game.HandlePoints;
 import Code.Languages.Text;
-import Code.Player;
 
 public class _2Tower extends Field {
 

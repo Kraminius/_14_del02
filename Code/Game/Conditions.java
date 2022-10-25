@@ -1,4 +1,6 @@
-package Code;
+package Code.Game;
+
+import Code.Player.Player;
 
 public class Conditions {
 

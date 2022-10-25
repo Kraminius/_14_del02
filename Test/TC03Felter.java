@@ -1,21 +1,20 @@
 package Test;
-import Code.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import Code.Languages.Text;
+import Code.Die.RollDice;
+import Code.Die.SumOfDice;
+import Code.Game.HandlePoints;
+import Code.Game.Picker;
+import Code.Player.Player;
 import Code.PlayingField.Field;
 import Code.PlayingField._2Tower;
 import Code.PlayingField._3Crater;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-import java.text.Format;
-import java.util.Scanner;
 
 public class TC03Felter {
 

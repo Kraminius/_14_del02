@@ -1,5 +1,6 @@
-package Code;
+package Code.Game;
 
+import Code.Die.SumOfDice;
 import Code.PlayingField.*;
 
 public class Picker {

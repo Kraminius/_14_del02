@@ -1,4 +1,6 @@
-package Code;
+package Code.Main;
+
+import Code.Game.Game;
 
 public class Main {
 

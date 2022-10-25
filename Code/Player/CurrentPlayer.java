@@ -1,4 +1,6 @@
-package Code;
+package Code.Player;
+
+import Code.Player.Players;
 
 public class CurrentPlayer {
     private int currentPlayerNumberVar;

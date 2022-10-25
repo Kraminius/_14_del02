@@ -1,6 +1,10 @@
-package Code;
+package Code.Game;
 
-import Code.PlayingField.Field;
+import Code.Player.CurrentPlayer;
+import Code.Die.RollDice;
+import Code.Die.SumOfDice;
+import Code.Player.Player;
+import Code.Player.Players;
 
 import java.util.Scanner;
 

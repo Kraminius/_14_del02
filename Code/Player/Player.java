@@ -1,4 +1,4 @@
-package Code;
+package Code.Player;
 
 //The base-code is copied from earlier project made by same group. Modified slightly to work in this project.
 public class Player {
@@ -7,7 +7,7 @@ public class Player {
 
     private int number; //The individual players score and number variables.
     private int score;
-    public Player(int playerNumber){ //The Game.Code.Players class calls this to set the player number.
+    public Player(int playerNumber){ //The Game.Code.Player.Players class calls this to set the player number.
         this.score = startPoints;
         number = playerNumber;
     }

@@ -1,5 +1,5 @@
 package Test;
-import Code.Player;
+import Code.Player.Player;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.DisplayName;

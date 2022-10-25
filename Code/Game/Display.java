@@ -1,4 +1,8 @@
-package Code;
+package Code.Game;
+
+import Code.Die.SumOfDice;
+import Code.Game.Conditions;
+import Code.Player.Player;
 
 //The base-code is copied from earlier project made by same group. Modified slightly to work in this project.
 public class Display {
