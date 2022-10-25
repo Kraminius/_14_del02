@@ -2,6 +2,9 @@ package Code.Languages;
 
 public class Text {
 
+    public void StartTurnText(){
+
+    }
 
     public void PickLanguage(int fieldNumber) {
 
