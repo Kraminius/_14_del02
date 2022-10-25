@@ -76,7 +76,6 @@ public class Game {
         HandlePoints handlePoints = new HandlePoints();
         handlePoints.GivePlayerPoints(player, picker.getTurnPoints());
 
-        System.out.println(player.getNumber() + " " + player.getScore());
 
         //run conditions
         conditions.CheckExtraTurn(picker);
