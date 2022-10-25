@@ -21,9 +21,11 @@ public class Display {
     public void extraTurnText(Conditions conditions) {
         if (conditions.isExtraTurn()) {
             System.out.println("Because you feel energized you got an extra turn!");
+            System.out.println("--------------------------------------------------------------------------------");
         }
         else {
             System.out.println("Your turn is over!");
+            System.out.println("--------------------------------------------------------------------------------");
 
         }
     }
