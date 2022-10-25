@@ -28,6 +28,7 @@ public class Game {
 
     public void StartPlayerTurn(){
 
+        //Player has to press something to start turn
         Scanner scanner = new Scanner(System.in);
         scanner.nextLine();
 
