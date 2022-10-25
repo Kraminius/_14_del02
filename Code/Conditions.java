@@ -19,6 +19,27 @@ public class Conditions {
 
     }
 
+    public boolean isWinTerm() {
+        return winTerm;
+    }
+
+    public void setWinTerm(boolean winTerm) {
+        this.winTerm = winTerm;
+    }
+
+    public boolean isExtraTurn() {
+        return extraTurn;
+    }
+
+    public void setExtraTurn(boolean extraTurn) {
+        this.extraTurn = extraTurn;
+    }
+
+    public void CheckExtraTurn(Picker picker){
+
+        extraTurn = picker.isRolledExtraTurn();
+
+    }
 
 
 }
