@@ -18,6 +18,7 @@ public class Text {
     }
     public void English(int fieldNumber) {
         switch (fieldNumber) {
+            //Fields, in each { }, change text in between " ".
             case 2:
             {
                 System.out.println("You climb up the great tower and at the top is a nest with a golden egg in it! +250");
