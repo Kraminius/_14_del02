@@ -25,7 +25,9 @@ public class Display {
         }
         else {
             System.out.println("Your turn is over!");
+            System.out.println();
             System.out.println("--------------------------------------------------------------------------------");
+            System.out.println();
 
         }
     }
