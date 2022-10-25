@@ -80,7 +80,7 @@ public class Text {
             }
             case 12:
             {
-                System.out.println("You are about to give up mining for the day, when a hit with the chisel makes a shinning crack " +
+                System.out.println("You are about to give up mining for the day, when a hit with the chisel makes a shinning crack i" +
                         "n the rock, you struck gold and a lot of it! +650");
                 break;
             }
