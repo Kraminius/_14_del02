@@ -15,19 +15,16 @@ public class CurrentPlayer {
 
     public void checkCurrentPlayer(Players players){
 
-        if(currentPlayerNumberVar < players.getAllPlayers().length){
+        if(currentPlayerNumberVar <= players.getAllPlayers().length){
 
+            currentPlayerNumber = currentPlayerNumberVar;
             currentPlayerNumberVar += 1;
-            currentPlayerNumber = 1;
+
 
         }
         else {
-
-
-            currentPlayerNumberVar = 1;
-            currentPlayerNumber =2;
-
-
+            currentPlayerNumber = 1;
+            currentPlayerNumberVar = 2;
         }
 
 
