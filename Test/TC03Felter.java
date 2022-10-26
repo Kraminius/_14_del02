@@ -218,4 +218,250 @@ public class TC03Felter {
                 "checks that field 6 text in english is right");
     }
 
+    @Test
+    @DisplayName("landing on field 7 money")
+    void testField7() {
+        Player player = new Player(1);
+        Picker picker = new Picker();
+        RollDice rollDice = new RollDice();
+        rollDice.setOurRolls(new int[]{4, 3});
+        SumOfDice sum = new SumOfDice();
+        sum.calcSum(rollDice);
+        picker.LandedField(sum);
+        HandlePoints handlePoints = new HandlePoints();
+        handlePoints.GivePlayerPoints(player, picker.getTurnPoints());
+        //Ser at score er rigtig
+        assertEquals(1000, player.getScore(),
+                "checks that money change on field 7 is right");
+    }
+
+    @Test
+    @DisplayName("landing on field 7 txt-english")
+    void testFieldTxt7() {
+
+        // Sætter output til newConsole
+        PrintStream previousConsole = System.out;
+        ByteArrayOutputStream newConsole = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(newConsole));
+        previousConsole.print(newConsole.toString());
+
+        //skriver og gemmer forventet 2 gange, da det hvis de er ens vil stå to gange i process linjen.
+        System.out.println("You enter the Monastery greeted by monks, they offer you enlightenment, but nothing of physical " +
+                "value. +0") ;
+        String expect = String.valueOf(newConsole) +  String.valueOf(newConsole);
+
+        Field field = new _7Monastery();
+        field.message();
+        previousConsole.println(newConsole);
+        String actual = String.valueOf(newConsole);
+
+        assertEquals(expect,actual,
+                "checks that field 7 text in english is right");
+    }
+
+    @Test
+    @DisplayName("landing on field 8 money")
+    void testField8() {
+        Player player = new Player(1);
+        Picker picker = new Picker();
+        RollDice rollDice = new RollDice();
+        rollDice.setOurRolls(new int[]{4, 4});
+        SumOfDice sum = new SumOfDice();
+        sum.calcSum(rollDice);
+        picker.LandedField(sum);
+        HandlePoints handlePoints = new HandlePoints();
+        handlePoints.GivePlayerPoints(player, picker.getTurnPoints());
+        //Ser at score er rigtig
+        assertEquals(930, player.getScore(),
+                "checks that money change on field 8 is right");
+    }
+
+    @Test
+    @DisplayName("landing on field 8 txt-english")
+    void testFieldTxt8() {
+
+        // Sætter output til newConsole
+        PrintStream previousConsole = System.out;
+        ByteArrayOutputStream newConsole = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(newConsole));
+        previousConsole.print(newConsole.toString());
+
+        //skriver og gemmer forventet 2 gange, da det hvis de er ens vil stå to gange i process linjen.
+        System.out.println("You can barely see in the darkness, when a band of robbers attack you, they take what they " +
+                "quickly can get and run off. -70") ;
+        String expect = String.valueOf(newConsole) +  String.valueOf(newConsole);
+
+        Field field = new _8BlackCave();
+        field.message();
+        previousConsole.println(newConsole);
+        String actual = String.valueOf(newConsole);
+
+        assertEquals(expect,actual,
+                "checks that field 8 text in english is right");
+    }
+
+    @Test
+    @DisplayName("landing on field 9 money")
+    void testField9() {
+        Player player = new Player(1);
+        Picker picker = new Picker();
+        RollDice rollDice = new RollDice();
+        rollDice.setOurRolls(new int[]{5, 4});
+        SumOfDice sum = new SumOfDice();
+        sum.calcSum(rollDice);
+        picker.LandedField(sum);
+        HandlePoints handlePoints = new HandlePoints();
+        handlePoints.GivePlayerPoints(player, picker.getTurnPoints());
+        //Ser at score er rigtig
+        assertEquals(1060, player.getScore(),
+                "checks that money change on field 9 is right");
+    }
+
+    @Test
+    @DisplayName("landing on field 9 txt-english")
+    void testFieldTxt9() {
+
+        // Sætter output til newConsole
+        PrintStream previousConsole = System.out;
+        ByteArrayOutputStream newConsole = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(newConsole));
+        previousConsole.print(newConsole.toString());
+
+        //skriver og gemmer forventet 2 gange, da det hvis de er ens vil stå to gange i process linjen.
+        System.out.println("The hut is warm and cosy after having climbed back down from the top, a man gives you a reward " +
+                "for telling about your journey. +60") ;
+        String expect = String.valueOf(newConsole) +  String.valueOf(newConsole);
+
+        Field field = new _9HutsInTheMountain();
+        field.message();
+        previousConsole.println(newConsole);
+        String actual = String.valueOf(newConsole);
+
+        assertEquals(expect,actual,
+                "checks that field 9 text in english is right");
+    }
+
+    @Test
+    @DisplayName("landing on field 10 money")
+    void testField10() {
+        Player player = new Player(1);
+        Picker picker = new Picker();
+        RollDice rollDice = new RollDice();
+        rollDice.setOurRolls(new int[]{5, 5});
+        SumOfDice sum = new SumOfDice();
+        sum.calcSum(rollDice);
+        picker.LandedField(sum);
+        HandlePoints handlePoints = new HandlePoints();
+        handlePoints.GivePlayerPoints(player, picker.getTurnPoints());
+        //Ser at score er rigtig
+        assertEquals(920, player.getScore(),
+                "checks that money change on field 10 is right");
+    }
+
+    @Test
+    @DisplayName("landing on field 10 txt-english")
+    void testFieldTxt10() {
+
+        // Sætter output til newConsole
+        PrintStream previousConsole = System.out;
+        ByteArrayOutputStream newConsole = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(newConsole));
+        previousConsole.print(newConsole.toString());
+
+        //skriver og gemmer forventet 2 gange, da det hvis de er ens vil stå to gange i process linjen.
+        System.out.println("You are hunted down under the full moon by wolfish beasts, a great slash hits you and your " +
+                "pocket of gold. Despite the wound you feel energized while under the moonlight and travels again immediately." +
+                " You have an extra turn. -80") ;
+        String expect = String.valueOf(newConsole) +  String.valueOf(newConsole);
+
+        Field field = new _10WerewolfWall();
+        field.message();
+        previousConsole.println(newConsole);
+        String actual = String.valueOf(newConsole);
+
+        assertEquals(expect,actual,
+                "checks that field 10 text in english is right");
+    }
+
+    @Test
+    @DisplayName("landing on field 11 money")
+    void testField11() {
+        Player player = new Player(1);
+        Picker picker = new Picker();
+        RollDice rollDice = new RollDice();
+        rollDice.setOurRolls(new int[]{6, 5});
+        SumOfDice sum = new SumOfDice();
+        sum.calcSum(rollDice);
+        picker.LandedField(sum);
+        HandlePoints handlePoints = new HandlePoints();
+        handlePoints.GivePlayerPoints(player, picker.getTurnPoints());
+        //Ser at score er rigtig
+        assertEquals(950, player.getScore(),
+                "checks that money change on field 11 is right");
+    }
+
+    @Test
+    @DisplayName("landing on field 11 txt-english")
+    void testFieldTxt11() {
+
+        // Sætter output til newConsole
+        PrintStream previousConsole = System.out;
+        ByteArrayOutputStream newConsole = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(newConsole));
+        previousConsole.print(newConsole.toString());
+
+        //skriver og gemmer forventet 2 gange, da det hvis de er ens vil stå to gange i process linjen.
+        System.out.println("You walk pondering in the twilight not noticing the pit before you until its too late, an evil " +
+                "man will only help you out for 50 gold. -50") ;
+        String expect = String.valueOf(newConsole) +  String.valueOf(newConsole);
+
+        Field field = new _11ThePit();
+        field.message();
+        previousConsole.println(newConsole);
+        String actual = String.valueOf(newConsole);
+
+        assertEquals(expect,actual,
+                "checks that field 11 text in english is right");
+    }
+
+    @Test
+    @DisplayName("landing on field 12 money")
+    void testField12() {
+        Player player = new Player(1);
+        Picker picker = new Picker();
+        RollDice rollDice = new RollDice();
+        rollDice.setOurRolls(new int[]{6, 6});
+        SumOfDice sum = new SumOfDice();
+        sum.calcSum(rollDice);
+        picker.LandedField(sum);
+        HandlePoints handlePoints = new HandlePoints();
+        handlePoints.GivePlayerPoints(player, picker.getTurnPoints());
+        //Ser at score er rigtig
+        assertEquals(1650, player.getScore(),
+                "checks that money change on field 12 is right");
+    }
+
+    @Test
+    @DisplayName("landing on field 12 txt-english")
+    void testFieldTxt12() {
+
+        // Sætter output til newConsole
+        PrintStream previousConsole = System.out;
+        ByteArrayOutputStream newConsole = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(newConsole));
+        previousConsole.print(newConsole.toString());
+
+        //skriver og gemmer forventet 2 gange, da det hvis de er ens vil stå to gange i process linjen.
+        System.out.println("You are about to give up mining for the day, when a hit with the chisel makes a shinning crack i" +
+                "n the rock, you struck gold and a lot of it! +650") ;
+        String expect = String.valueOf(newConsole) +  String.valueOf(newConsole);
+
+        Field field = new _12Goldmine();
+        field.message();
+        previousConsole.println(newConsole);
+        String actual = String.valueOf(newConsole);
+
+        assertEquals(expect,actual,
+                "checks that field 12 text in english is right");
+    }
 }
