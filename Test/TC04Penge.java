@@ -33,7 +33,7 @@ public class TC04Penge {
         Player player = new Player(1);
         player.setScore(199);
         player.setScore(player.getScore() -200);
-        assertEquals(0, player.getScore(),
+        assertEquals(-1, player.getScore(),
                 "checks money cant go below 0");
     }
 }
