@@ -10,11 +10,6 @@ public class Picker {
     private boolean rolledExtraTurn;
     private int turnPoints;
 
-
-    public boolean isRolledExtraTurn() {
-        return rolledExtraTurn;
-    }
-
     public void LandedField(SumOfDice sumOfDice){
 
 
@@ -108,5 +103,9 @@ public class Picker {
 
     public int getTurnPoints() {
         return turnPoints;
+    }
+
+    public boolean isRolledExtraTurn() {
+        return rolledExtraTurn;
     }
 }
