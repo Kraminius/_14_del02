@@ -105,5 +105,6 @@ public class TC01DieRandom {
             System.out.println("Værdien er udenfor normalfordelingen");
 
         }
+
     }
 }

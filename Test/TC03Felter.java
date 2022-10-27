@@ -464,4 +464,62 @@ public class TC03Felter {
         assertEquals(expect,actual,
                 "checks that field 12 text in english is right");
     }
+
+    @Test
+    @DisplayName("landing on field 1 is impossible")
+    void testField1() {
+        // Sætter output til newConsole
+        PrintStream previousConsole = System.out;
+        ByteArrayOutputStream newConsole = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(newConsole));
+        previousConsole.print(newConsole.toString());
+
+        //skriver og gemmer forventet 2 gange, da det hvis de er ens vil stå to gange i process linjen.
+        System.out.println("Field does not exist!") ;
+        String expect = String.valueOf(newConsole) +  String.valueOf(newConsole);
+
+        Player player = new Player(1);
+        Picker picker = new Picker();
+        RollDice rollDice = new RollDice();
+        rollDice.setOurRolls(new int[]{0, 1});
+        SumOfDice sum = new SumOfDice();
+        sum.calcSum(rollDice);
+        picker.LandedField(sum);
+
+        previousConsole.println(newConsole);
+        String actual = String.valueOf(newConsole);
+
+        //Ser at score er rigtig
+        assertEquals(expect, actual,
+                "checks that no field 1 exists");
+    }
+
+    @Test
+    @DisplayName("landing on field 13 is impossible")
+    void testField13() {
+        // Sætter output til newConsole
+        PrintStream previousConsole = System.out;
+        ByteArrayOutputStream newConsole = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(newConsole));
+        previousConsole.print(newConsole.toString());
+
+        //skriver og gemmer forventet 2 gange, da det hvis de er ens vil stå to gange i process linjen.
+        System.out.println("Field does not exist!") ;
+        String expect = String.valueOf(newConsole) +  String.valueOf(newConsole);
+
+        Player player = new Player(1);
+        Picker picker = new Picker();
+        RollDice rollDice = new RollDice();
+        rollDice.setOurRolls(new int[]{7, 6});
+        SumOfDice sum = new SumOfDice();
+        sum.calcSum(rollDice);
+        picker.LandedField(sum);
+
+        previousConsole.println(newConsole);
+        String actual = String.valueOf(newConsole);
+
+        //Ser at score er rigtig
+        assertEquals(expect, actual,
+                "checks that no field 13 exists");
+    }
 }
