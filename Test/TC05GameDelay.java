@@ -57,7 +57,7 @@ class TC05GameDelay {
 
 
     @Test
-    @DisplayName("next players turn")
+    @DisplayName("delay tælles op")
     void testGameDelay() {
         //Player player = new Player(2);
 
