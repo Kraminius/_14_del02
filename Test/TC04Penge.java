@@ -28,12 +28,12 @@ public class TC04Penge {
     }
 
     @Test
-    @DisplayName("prevent negativ money")
+    @DisplayName("allow negativ money")
     void testMinMoney() {
         Player player = new Player(1);
         player.setScore(199);
         player.setScore(player.getScore() -200);
-        assertEquals(0, player.getScore(),
-                "checks money cant go below 0");
+        assertEquals(-1, player.getScore(),
+                "checks money can go below 0");
     }
 }

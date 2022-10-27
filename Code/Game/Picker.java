@@ -93,9 +93,10 @@ public class Picker {
                 this.turnPoints = field.response();
                 field.message();
                 break;
-
+            default:
+                System.out.println("Field does not exist!");
+                break;
         }
-
 
 
 
